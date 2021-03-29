@@ -9,7 +9,9 @@
 <body>
 
     <div id="vue-root">
-        {{message}}
+        <span>Enter your Name</span>
+        <input type="text" v-model="name">
+        <h2>My name is: {{name}}</h2>
     </div>
     
     <script type="text/javascript" src="assets/js/vue.js"></script>

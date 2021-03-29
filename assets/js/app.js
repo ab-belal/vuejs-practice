@@ -1,6 +1,10 @@
 var app = new Vue({
     el: '#vue-root',
     data: {
-        message: 'hello world'
-    }
+        name: 'Jhon doe'
+    },
+
+    mounted: function() {
+        console.log('mounted');
+    },
 });
