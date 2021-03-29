@@ -6,5 +6,5 @@ var app = new Vue({
 
     mounted: function() {
         console.log('mounted');
-    },
+    }
 });
