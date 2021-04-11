@@ -12,6 +12,15 @@
         <span>Enter your Name</span>
         <input type="text" v-model="name">
         <h2>My name is: {{name}}</h2>
+
+        <ul>
+            <li><a :href="link1.url" :title="link1.title">{{link1.text}}</a></li>
+            <li><a :href="link2.url" :title="link2.title">{{link2.text}}</a></li>
+        </ul>
+
+        <ul class="skils">
+            <li v-for="(skill, index) in skills">{{index+1}}. {{skill.language}} ({{skill.item}})</li>
+        </ul>
     </div>
     
     <script type="text/javascript" src="assets/js/vue.js"></script>
