@@ -17,7 +17,33 @@ var app = new Vue({
         //     {language: 'vue.js', item: 6},
         //     {language: 'react.js', item: 7},
         // ],
-        skills: ['html', 'css', 'css', 'php', 'jQuery', 'vue.js',]
+        skills: ['html', 'css', 'css', 'php', 'jQuery', 'vue.js',],
+
+        payments: [
+            {name: 'house rent', amount: 1500, paid: true},
+            {name: 'electricity', amount: 1200, paid: false},
+            {name: 'gas', amount: 1400, paid: false},
+            {name: 'water', amount: 110, paid: true},
+            {name: 'net', amount: 117, paid: true},
+        ],
+    },
+
+    computed: {
+        unpaidPamynts: function(){
+            return this.payments.filter( function(arg){
+                return !arg.paid;
+            });
+            
+        },
+
+        totalAmount: function(){
+            var sum = 0;
+
+            for( var i=0; i < this.payments.length; i++ ){
+                sum += this.payments[i].amount;
+            }
+            return sum;
+        }
     },
 
     methods: {

@@ -23,6 +23,22 @@
         </ul>
         <input type="text" v-model="newSkill">
         <button @click="addNewSkill">add new skill</button>
+
+        <h3>payments</h3>
+        <ul>
+            <li v-for="(payment, index) in payments">
+                {{payment.name}} ({{payment.amount}})
+            </li>
+        </ul>
+
+        <h3>unpaid payments</h3>
+        <ul>
+            <li v-for="(payment, index) in unpaidPamynts">
+                {{payment.name}} ({{payment.amount}})
+            </li>
+        </ul>
+
+        <h3>Total amount: {{totalAmount}}</h3>
     </div>
     
     <script type="text/javascript" src="assets/js/vue.js"></script>
