@@ -19,8 +19,10 @@
         </ul>
 
         <ul class="skils">
-            <li v-for="(skill, index) in skills">{{index+1}}. {{skill.language}} ({{skill.item}})</li>
+            <li v-for="(skill, index) in skills">{{index+1}}. {{skill}}</li>
         </ul>
+        <input type="text" v-model="newSkill">
+        <button @click="addNewSkill">add new skill</button>
     </div>
     
     <script type="text/javascript" src="assets/js/vue.js"></script>
